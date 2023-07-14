@@ -5,7 +5,7 @@ test("exec", function() {
     var numberFinder = /(\d).*(\d)/;
     var results = numberFinder.exec("what if 6 turned out to be 9?");
     ok(results.equalTo([__, __, __]), 'what is the value of results?');		
-});
+}); 
 
 test("test", function() {
     var containsSelect = /select/.test("  select * from users ");

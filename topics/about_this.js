@@ -35,7 +35,7 @@ test("'this' set explicitly", function () {
 	}
 
 	// calling a function with 'call' lets us assign 'this' explicitly
-	var message = person.intro.call({__: "Frank"});
+	var message = person.intro.call({name: "Frank"});
 	equal(message, "Hello, my name is Frank", "What does 'this' refer to when you use the 'call()' method?");
 });
 
