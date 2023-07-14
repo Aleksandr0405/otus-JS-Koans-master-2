@@ -14,12 +14,12 @@ test("test", function() {
 
 test("match", function() {
     var matches = "what if 6 turned out to be 9?".match(/(\d)/g);
-    ok(matches.equalTo([__, __]), 'what is the value of matches?');
+    ok(matches.equalTo(['6', '9']), 'what is the value of matches?');
 });
 
 test("replace", function() {
-    var pie = "apple pie".replace("apple", "strawberry");
-    equal(__, pie, 'what is the value of pie?');
+    var pie = "apple pie".replace("apple", "strawberry"); //замена
+    equal('strawberry pie', pie, 'what is the value of pie?'); //Возможно я ошибся и ответ не 'strawberry pie' 
 
     pie = "what if 6 turned out to be 9?".replace(/\d/g, function(number) { // the second parameter can be a string or a function
         var map = {'6': 'six','9': 'nine'};
